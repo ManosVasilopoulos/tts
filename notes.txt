@@ -1,0 +1,12 @@
+- To train a new model, you need to define your own config.json to define model details,
+training configuration and more (check the examples).
+Then call the corressponding train script.
+
+Example:
+python TTS/bin/train_tacotron.py --config_path TTS/tts/configs/config.json
+
+- To fine-tune a model, use --restore_path
+python TTS/bin/train_tacotron.py --config_path TTS/tts/configs/config.json --restore_path /path/to/your/model.pth.tar
+
+- To continue an old training run, use --continue_path:
+python TTS/bin/train_tacotron.py --continue_path /path/to/your/run_folder/
